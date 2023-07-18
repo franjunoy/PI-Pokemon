@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem;
+  height: 0vh;
+  width: 60%;
+  
+}
+
+.option {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #ffffffb4;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+.label {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #ffffffb4;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin-right: 10px; /* Ajusta el valor según la cantidad de espacio deseada */
+  align-items: center;
+}
+
+.label:hover {
+  background-color: rgba(255, 217, 0, 0.5);
+}
+
+.label input {
+  display: none;
+}
+
+.conteinerLabel{
+  margin-left: 620px; /* Ajusta el valor según tu necesidad */
+  margin-top: -40px;
+}

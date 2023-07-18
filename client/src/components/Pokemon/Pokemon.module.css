@@ -1,0 +1,45 @@
+.PokemonGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 1100px;
+  justify-content: center;
+  margin-top: -60px;
+}
+
+.PokemonCard {
+  background-color: #eeeeee94;
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.PokemonCard:hover {
+  transform: scale(1.1);
+}
+
+.PokemonImage {
+  margin-top: 20px;
+  max-width: 90%;
+  width: 100px;
+  height: 100px;
+}
+
+.PokemonName {
+  margin: 15px 0 7px;
+  letter-spacing: 1px;
+}
+
+.PokemonTypes {
+  margin: 0 5px;
+}
+
+.PokemonType {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}

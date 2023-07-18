@@ -1,0 +1,133 @@
+.container {
+  background-image: url("../../assets/Fondo pokedex.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.button{
+  width: 140px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: 110px; /* Ajusta la altura de la imagen según tus necesidades */
+  background-color: transparent;
+  border: transparent;
+  display: flex;
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del elemento */
+  /* Ajusta otras propiedades y estilos según tus necesidades */
+}
+
+.containerPokemon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  margin-top: 20px;
+  max-width: 90%;
+  width: 300px;
+  height: 300px;
+}
+
+.idNombre {
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  background-color: #ffffff25;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 40px;
+  width: 220px;
+  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+.idNombreDB {
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  background-color: #ffffff25;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 130px;
+  width: 220px;
+  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+.types {
+  display: flex;
+}
+
+.PokemonTypeImage {
+  display: inline-block;
+  width: 90px; /* Ajusta el tamaño según tus necesidades */
+  height: 20px; /* Ajusta el tamaño según tus necesidades */
+  margin-right: 7px; /* Ajusta el espacio entre los tipos */
+}
+
+.h5 {
+  display: flex;
+}
+
+.first {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 70px;
+  background-color: #ffffff25;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 140px;
+  width: 170px;
+  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+.second {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 70px;
+  background-color: #ffffff25;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 140px;
+  width: 170px;
+  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+.third{
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 70px;
+  background-color: #ffffff25;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 140px;
+  width: 170px;
+  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+.espacio{
+  font-size: 25px;
+  margin-right: 70px; /* Ajusta el margen derecho para moverlo hacia la izquierda */
+  background-color: transparent;
+  height: 140px; /* Ajusta la altura según sea necesario */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}

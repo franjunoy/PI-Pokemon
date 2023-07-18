@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Unown";
+  src: url("../../assets/Unown.ttf") format('truetype');
+}
+
+.HomePage {
+  background-image: url("../../assets/mapaHoen.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.OrderFilter{
+  margin-bottom: 70px;  
+}
+
+.button{
+  font-Family: "Unown", sans-serif;
+  width: "1px";
+  height: "1px";
+  position: "absolute";
+  background-color: transparent;
+  border: transparent;
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+.image{
+  width: "1px";
+  height: "1px";
+}
+
+.h2{
+  background-color: rgba(255, 255, 255, 0.53);
+}

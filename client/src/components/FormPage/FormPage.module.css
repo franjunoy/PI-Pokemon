@@ -1,0 +1,55 @@
+.buttonHome{
+    width: 140px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 110px; /* Ajusta la altura de la imagen según tus necesidades */
+    background-color: transparent;
+    border: transparent;
+    display: flex;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del elemento */
+  /* Ajusta otras propiedades y estilos según tus necesidades */
+}
+
+.buttonCreate{
+    width: 140px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 110px; /* Ajusta la altura de la imagen según tus necesidades */
+    background-color: transparent;
+    border: transparent;
+    display: flex;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del elemento */
+  /* Ajusta otras propiedades y estilos según tus necesidades */
+}
+
+.container{
+    background-image: url("../../assets/laboratorio\ mew.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.containerCreate{
+}
+
+.div{
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+}
+
+.titule{
+
+}
+
+.form{
+
+}
+
+.validate{
+
+}
+
+.alert{
+
+}
