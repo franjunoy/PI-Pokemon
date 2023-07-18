@@ -171,19 +171,19 @@ const FormPage = () => {
       <h1 className={style.titule}>Crea tu Pokémon</h1>
       <form onSubmit={handleSubmit} className={style.form}>
         <div className={style.div}>
-        <div>
-          <label className={style.form}>Nombre:</label>
+        <div className={style.param}>
+          <label className={style.form}>Nombre: </label>
           <input
             type="text"
             value={input.Nombre}
             name="Nombre"
             onChange={handleChange}
           />
-          <p className={style.validate}>No puede contener más de 12 letras y solo se puede usar el "-"</p>
+          <p className={style.validate}> No puede contener más de 12 letras y solo se puede usar el "-"</p>
           {errors.Nombre && <span className={style.alert}>{errors.Nombre}</span>}
         </div>
-        <div>
-          <label className={style.form}>Imagen:</label>
+        <div className={style.param}>
+          <label className={style.form}>Imagen: </label>
           <input
             type="text"
             value={input.Imagen}
@@ -192,77 +192,81 @@ const FormPage = () => {
           />
           {errors.Imagen && <span className={style.alert}>{errors.Imagen}</span>}
         </div>
-        <div>
-          <label className={style.form}>Vida:</label>
+        <div className={style.param}>
+          <label className={style.form}>Vida: </label>
           <input
             type="text"
             value={input.Vida}
             name="Vida"
             onChange={handleChange}
           />
-          <p className={style.validate}>Tiene que ser un valor entre 1 y 255</p>
+          <p className={style.validate}> Tiene que ser un valor entre 1 y 255</p>
           {errors.Vida && <span className={style.alert}>{errors.Vida}</span>}
         </div>
-        <div>
-          <label className={style.form}>Ataque:</label>
+        <div className={style.param}>
+          <label className={style.form}>Ataque: </label>
           <input
             type="text"
             value={input.Ataque}
             name="Ataque"
             onChange={handleChange}
           />
-          <p className={style.validate}>Tiene que ser un valor entre 1 y 209</p>
+          <p className={style.validate}> Tiene que ser un valor entre 1 y 209</p>
           {errors.Ataque && <span className={style.alert}>{errors.Ataque}</span>}
         </div>
-        <div>
-          <label className={style.form}>Defensa:</label>
+        <div className={style.param}>
+          <label className={style.form}>Defensa: </label>
           <input
             type="text"
             value={input.Defensa}
             name="Defensa"
             onChange={handleChange}
           />
-          <p className={style.validate}>Tiene que ser un valor entre 5 y 229</p>
+          <p className={style.validate}> Tiene que ser un valor entre 5 y 229</p>
           {errors.Defensa && <span className={style.alert}>{errors.Defensa}</span>}
         </div>
-        <div>
-          <label className={style.form}>Velocidad:</label>
+        <div className={style.param}>
+          <label className={style.form}>Velocidad: </label>
           <input
             type="text"
             value={input.Velocidad}
             name="Velocidad"
             onChange={handleChange}
           />
-          <p className={style.validate}>Tiene que ser un valor entre 5 y 199</p>
+          <p className={style.validate}> Tiene que ser un valor entre 5 y 199</p>
           {errors.Velocidad && <span className={style.alert}>{errors.Velocidad}</span>}
         </div>
-        <div>
-          <label className={style.form}>Altura:</label>
+        <div className={style.param}>
+          <label className={style.form}>Altura: </label>
           <input
             type="text"
             value={input.Altura}
             name="Altura"
             onChange={handleChange}
           />
-          <p className={style.validate}>Tiene que ser un valor entre 0.1 y 20.0</p>
+          <p className={style.validate}> Tiene que ser un valor entre 0.1 y 20.0</p>
           {errors.Altura && <span className={style.alert}>{errors.Altura}</span>}
         </div>
-        <div>
-          <label className={style.form}>Peso:</label>
+        <div className={style.param}>
+          <label className={style.form}>Peso: </label>
           <input
             type="text"
             value={input.Peso}
             name="Peso"
             onChange={handleChange}
           />
-          <p className={style.validate}>Tiene que ser un valor entre 0.1 y 1000.0</p>
+          <p className={style.validate}> Tiene que ser un valor entre 0.1 y 1000.0</p>
           {errors.Peso && <span className={style.alert}>{errors.Peso}</span>}
         </div>
         </div>
         <div>
-          <label>Tipos:</label>
+          <div className={style.typeLabel}>
+          <label className={style.titleLabelType}>Tipos: </label>
+          <p className={style.validateType}> Solo puede agregar hasta 2 tipos</p>
+          </div>
+          <div className={style.ConteinerCheckboxType}> 
           {types.map((tipo) => (
-            <label key={tipo.Nombre}>
+            <label className={style.labelType} key={tipo.Nombre}>
               <input
                 type="checkbox"
                 name={tipo.Nombre}
@@ -272,11 +276,15 @@ const FormPage = () => {
               {tipo.Nombre}
             </label>
           ))}
-          <p className={style.validate}>Solo puede agregar hasta 2 tipos</p>
-          {errors.Tipo && <span className={style.alert}>{errors.Tipo}</span>}
+          </div>
+          {errors.Tipo && <span className={style.alertType}>{errors.Tipo}</span>}
         </div>
+        <div className={style.divPokeball}>
         <button type="submit"><img src={pokebolaAtrapada} alt="pokebolaAtrapada" className={style.buttonCreate}/>Crear Pokémon</button>
+        </div>
       </form>
+      </div>
+      <div className={style.espacio}>
       </div>
     </div>
   );

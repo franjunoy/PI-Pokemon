@@ -9,9 +9,16 @@
   /* Ajusta otras propiedades y estilos según tus necesidades */
 }
 
+.divPokeball{
+  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
 .buttonCreate{
-    width: 140px; /* Ajusta el ancho de la imagen según tus necesidades */
-    height: 110px; /* Ajusta la altura de la imagen según tus necesidades */
+    width: 90px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 65px; /* Ajusta la altura de la imagen según tus necesidades */
     background-color: transparent;
     border: transparent;
     display: flex;
@@ -27,29 +34,110 @@
     background-size: cover;
 }
 
-.containerCreate{
-}
-
 .div{
     justify-content: center;
     align-items: center;
+    height: 520px;
+    width: 720px;
+    margin-left: 400px;
 }
 
-.form{
+.param{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7px
 }
 
 .titule{
-
-}
-
-.form{
-
+  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  background-color: #ffffff79;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 40px;
+  width: 320px;
+  margin-left: 550px;
 }
 
 .validate{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #000000;
+  background-color: #f6ff00ad;
+  border-radius: 5px;
+}
 
+.validateType{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #000000;
+  background-color: #f6ff00ad;
+  border-radius: 5px;
+  height: 20px;
+  width: 230px;
+  margin-left: 550px;
 }
 
 .alert{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ff0000a7;
+  border-radius: 5px;
+  height: 20px;
+  width: 230px;
+  margin-left: 550px;
+}
 
+.alertType{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ff0000a7;
+  border-radius: 5px;
+}
+
+.titleLabelType{
+  margin-left: 550px;
+}
+
+.ConteinerCheckboxType{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.labelType{
+  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center;
+}
+
+.checkboxCustomType{
+  width: 16px;
+  height: 16px;
+  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+
+
+
+
+.espacio{
+  font-size: 25px;
+  margin-right: 70px; /* Ajusta el margen derecho para moverlo hacia la izquierda */
+  background-color: transparent;
+  height: 140px; /* Ajusta la altura según sea necesario */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
 }
