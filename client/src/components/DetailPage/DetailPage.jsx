@@ -91,8 +91,8 @@ const DetailPage = () => {
               <h5>-Vida: {pokemon.idPokemonApi.Vida}</h5>
             </div>
             <div className={style.third}>
-              <h5>-Altura: {pokemon.idPokemonApi.Altura}</h5>
-              <h5>-Peso: {pokemon.idPokemonApi.Peso}</h5>
+              <h5>-Altura: {pokemon.idPokemonApi.Altura}m</h5>
+              <h5>-Peso: {pokemon.idPokemonApi.Peso}kg</h5>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Pokemon from "../Pokemon/Pokemon";
 import { useEffect, useState } from "react";
 import { getPokemons } from "../../redux/actions/actions";
+import style from "./Cards.module.css";
 
 
 const Cards = () => {
@@ -18,14 +19,12 @@ const Cards = () => {
     const endPage = startPage + pokemonsPage;
     const currentPokemons = pokemons.slice(startPage, endPage);
   
-    // Lógica para cambiar a la página anterior
     const PreviousPage = () => {
       if (actualPage > 1) {
         setActualPage(actualPage - 1);
       }
     };
   
-    // Lógica para cambiar a la página siguiente
     const NextPage = () => {
       const totalPages = Math.ceil(pokemons.length / pokemonsPage);
       if (actualPage < totalPages) {
@@ -36,9 +35,7 @@ const Cards = () => {
       
         <div>
           <Pokemon pokemons={currentPokemons} />
-    
-          {/* Agrega controles de paginado */}
-          <div>
+          <div className={style.button}>
             <button onClick={PreviousPage} disabled={actualPage === 1}>
               Anterior
             </button>

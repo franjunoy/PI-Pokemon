@@ -12,7 +12,7 @@ const createNewPokemon = async (Nombre, Imagen, Vida, Ataque, Defensa, Velocidad
             Altura,
             Peso,
         });
-        console.log(newPokemon);
+        
         const types = Tipo.map(async (tipo) => {
             const existingType = await Type.findOne({ where: { Nombre: tipo.Nombre } });
             if (existingType) {

@@ -18,7 +18,7 @@
   font-weight: bold;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  margin-left: 30px;
+  margin-left: 200px;
   margin-top: 40px;
 }
 
@@ -31,7 +31,7 @@
   cursor: pointer;
   font-weight: bold;
   font-family: Arial, sans-serif;
-  margin-right: 10px; /* Ajusta el valor según la cantidad de espacio deseada */
+  margin-right: 10px;
   align-items: center;
 }
 
@@ -44,6 +44,6 @@
 }
 
 .conteinerLabel{
-  margin-left: 620px; /* Ajusta el valor según tu necesidad */
+  margin-left: 880px;
   margin-top: -40px;
 }

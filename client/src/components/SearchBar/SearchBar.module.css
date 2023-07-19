@@ -27,13 +27,13 @@
 
 .button {
   font-family: "Unown", sans-serif;
-  font-size: 20px; /* Ajusta el tamaño de fuente del botón según tu preferencia */
+  font-size: 20px;
   padding: 1px 20px;
   flex-direction: row
   
 }
 
 .input {
-  font-size: 12px; /* Ajusta el tamaño de fuente del botón según tu preferencia */
+  font-size: 12px;
   padding: 5px 10px;
 }

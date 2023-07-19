@@ -31,7 +31,6 @@ const handleClear = (event) => {
   dispatch(getPokemons());
 }
 
-
   return (
     <div className={style.container}>
     <img src={Pokedex} alt="Pokedex" className={style.image} />

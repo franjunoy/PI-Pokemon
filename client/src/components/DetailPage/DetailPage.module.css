@@ -6,14 +6,13 @@
 }
 
 .button{
-  width: 140px; /* Ajusta el ancho de la imagen según tus necesidades */
-  height: 110px; /* Ajusta la altura de la imagen según tus necesidades */
+  width: 140px;
+  height: 110px;
   background-color: transparent;
   border: transparent;
   display: flex;
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del elemento */
-  /* Ajusta otras propiedades y estilos según tus necesidades */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .containerPokemon{
@@ -38,11 +37,11 @@
   border-radius: 5px;
   border: 1px solid black;
   height: 40px;
-  width: 220px;
-  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto dentro del elemento */
+  width: 260px;
+  display: flow-root;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .idNombreDB {
@@ -54,10 +53,10 @@
   border: 1px solid black;
   height: 130px;
   width: 220px;
-  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto dentro del elemento */
+  display: flow-root;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
 }
 
 .types {
@@ -66,9 +65,9 @@
 
 .PokemonTypeImage {
   display: inline-block;
-  width: 90px; /* Ajusta el tamaño según tus necesidades */
-  height: 20px; /* Ajusta el tamaño según tus necesidades */
-  margin-right: 7px; /* Ajusta el espacio entre los tipos */
+  width: 90px;
+  height: 20px;
+  margin-right: 7px;
 }
 
 .h5 {
@@ -85,10 +84,10 @@
   border: 1px solid black;
   height: 140px;
   width: 170px;
-  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto dentro del elemento */
+  display: flow-root; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .second {
@@ -101,10 +100,10 @@
   border: 1px solid black;
   height: 140px;
   width: 170px;
-  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto dentro del elemento */
+  display: flow-root; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .third{
@@ -117,17 +116,17 @@
   border: 1px solid black;
   height: 140px;
   width: 170px;
-  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto dentro del elemento */
+  display: flow-root;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
 }
 
 .espacio{
   font-size: 25px;
-  margin-right: 70px; /* Ajusta el margen derecho para moverlo hacia la izquierda */
+  margin-right: 70px;
   background-color: transparent;
-  height: 140px; /* Ajusta la altura según sea necesario */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
+  height: 140px;
+  justify-content: center; 
+  align-items: center;
 }

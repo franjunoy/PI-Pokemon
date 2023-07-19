@@ -1,143 +1,135 @@
-.buttonHome{
-    width: 140px; /* Ajusta el ancho de la imagen según tus necesidades */
-    height: 110px; /* Ajusta la altura de la imagen según tus necesidades */
-    background-color: transparent;
-    border: transparent;
-    display: flex;
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del elemento */
-  /* Ajusta otras propiedades y estilos según tus necesidades */
+.buttonHome {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.divPokeball{
-  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto dentro del elemento */
+.imageHome{
+  width: 140px;
+  height: 110px;
+  background-color: transparent;
+  border: transparent;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .buttonCreate{
-    width: 90px; /* Ajusta el ancho de la imagen según tus necesidades */
-    height: 65px; /* Ajusta la altura de la imagen según tus necesidades */
-    background-color: transparent;
-    border: transparent;
-    display: flex;
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del elemento */
-  /* Ajusta otras propiedades y estilos según tus necesidades */
-}
-
-.container{
-    background-image: url("../../assets/laboratorio\ mew.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.div{
-    justify-content: center;
-    align-items: center;
-    height: 520px;
-    width: 720px;
-    margin-left: 400px;
-}
-
-.param{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  padding: 7px
-}
-
-.titule{
-  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto dentro del elemento */
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  background-color: #ffffff79;
+  padding: 20px;
   border-radius: 5px;
-  border: 1px solid black;
-  height: 40px;
-  width: 320px;
-  margin-left: 550px;
+  width: 60px;
 }
 
-.validate{
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  color: #000000;
-  background-color: #f6ff00ad;
-  border-radius: 5px;
-}
 
-.validateType{
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  color: #000000;
-  background-color: #f6ff00ad;
-  border-radius: 5px;
-  height: 20px;
-  width: 230px;
-  margin-left: 550px;
-}
-
-.alert{
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  color: #000000;
-  background-color: #ff0000a7;
-  border-radius: 5px;
-  height: 20px;
-  width: 230px;
-  margin-left: 550px;
-}
-
-.alertType{
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  color: #000000;
-  background-color: #ff0000a7;
-  border-radius: 5px;
-}
-
-.titleLabelType{
-  margin-left: 550px;
-}
-
-.ConteinerCheckboxType{
+.container {
+  background-image: url("../../assets/laboratorio mew.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 160vh;
+  padding-top: 20px;
+  position: relative;
 }
 
-.labelType{
-  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff79;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  align-items: center;
+  background-color: #ffffff79;
+  border: 1px solid black;
+  border-radius: 10px;
   text-align: center;
 }
 
-.checkboxCustomType{
-  width: 16px;
-  height: 16px;
-  display: flow-root; /* Cambia el valor a "flex" para permitir la alineación */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto dentro del elemento */
-  font-family: Arial, sans-serif;
+div.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
   font-weight: bold;
 }
 
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
+p {
+  margin: 5px 0;
+  font-size: 12px;
+  color: rgb(199, 192, 0)f9f;
+}
 
+span {
+  color: red;
+  font-size: 12px;
+}
 
+div.tipos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.espacio{
-  font-size: 25px;
-  margin-right: 70px; /* Ajusta el margen derecho para moverlo hacia la izquierda */
-  background-color: transparent;
-  height: 140px; /* Ajusta la altura según sea necesario */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
+div.tipos label {
+  margin-right: 10px;
+}
+
+div.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+div.button-group button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div.button-group a {
+  text-decoration: none;
+  color: white;
+}
+
+.tipos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.imageDiv {
+  margin-bottom: 20px;
+}
+
+.nameAndLifeDiv {
+  margin-bottom: 10px;
 }

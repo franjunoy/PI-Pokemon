@@ -2,8 +2,8 @@
     background-image: url("../../assets/huevoPokemon.png");
     display: flex;
     justify-content: flex-end;
-    margin-left: 100px; /* Ajusta la cantidad de píxeles según tus necesidades */
-    margin-top: 20px; /* Ajusta la cantidad de píxeles según tus necesidades */
-    width: 700px; /* Ajusta el ancho según tus necesidades */
-    height: 150px; /* Ajusta el alto según tus necesidades */
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 700px;
+    height: 150px;
 }
