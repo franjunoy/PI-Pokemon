@@ -10,8 +10,8 @@ const findTypesPokemons = async () => {
   await Promise.all(
     types.map((type) =>
       Type.findOrCreate({
-        where: { 
-          Nombre: type
+        where: {
+          Nombre: type,
         },
       })
     )

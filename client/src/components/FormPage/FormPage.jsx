@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { createPokemons, getTypes, getPokemons } from "../../redux/actions/actions";
+import {
+  createPokemons,
+  getTypes,
+  getPokemons,
+} from "../../redux/actions/actions";
 import Home from "../../assets/Home.png";
 import pokebolaAtrapada from "../../assets/pokebolaAtrapada.png";
 import style from "./FormPage.module.css";
@@ -178,7 +182,10 @@ const FormPage = () => {
               name="Nombre"
               onChange={handleChange}
             />
-            <p>El nombre no puede tener mas de 12 letras, ni numeros y solo permite '-'</p>
+            <p>
+              El nombre no puede tener mas de 12 letras, ni numeros y solo
+              permite '-'
+            </p>
             {errors.Nombre && <span>{errors.Nombre}</span>}
           </div>
           <div className={`${style.formGroup} ${style.imageDiv}`}>
@@ -279,7 +286,11 @@ const FormPage = () => {
           </div>
           <div className={style.buttonGroup}>
             <button type="submit">
-              <img src={pokebolaAtrapada} alt="pokebolaAtrapada" className={style.buttonCreate} />
+              <img
+                src={pokebolaAtrapada}
+                alt="pokebolaAtrapada"
+                className={style.buttonCreate}
+              />
               Crear Pokémon
             </button>
           </div>

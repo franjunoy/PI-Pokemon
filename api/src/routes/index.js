@@ -1,4 +1,4 @@
-const { Router } = require('express');
+const { Router } = require("express");
 const pokemonsRouter = require("./router/pokemonsRouter");
 const typesRouter = require("./router/typesRouter");
 

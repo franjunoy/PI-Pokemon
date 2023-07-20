@@ -87,7 +87,4 @@ const Pokemon = ({ pokemons }) => {
   );
 };
 
-
 export default Pokemon;
-
-
