@@ -1,14 +1,30 @@
 import style from "./OrderFilter.module.css";
-import { useDispatch } from "react-redux";
-import { filterPokemon, orderPokemons } from "../../redux/actions/actions";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  filterPokemon,
+  orderPokemons,
+  filterByTypes,
+} from "../../redux/actions/actions";
 import { useState } from "react";
+import { getTypes } from "../../redux/actions/actions";
+import { useEffect } from "react";
 
 const OrderFilter = () => {
   const dispatch = useDispatch();
   const [aux, setAux] = useState(false);
+  const [selectedTipo, setSelectedTipo] = useState(false);
+  const tipos = useSelector((state) => state.types);
+  useEffect(() => {
+    dispatch(getTypes());
+  }, [dispatch]);
 
   const handleFilter = (event) => {
     dispatch(filterPokemon(event.target.value));
+  };
+
+  const handleFilterByTypes = (event) => {
+    setSelectedTipo(event.target.value);
+    dispatch(filterByTypes(event.target.value));
   };
 
   const handleOrder = (event) => {
@@ -59,6 +75,16 @@ const OrderFilter = () => {
             onChange={handleFilter}
           />
         </label>
+      </div>
+      <div>
+        <select onChange={handleFilterByTypes} className={style.option}>
+          <option value="All Pokemons">Todos los Tipos</option>
+          {tipos.map((type) => (
+            <option key={type.ID} value={type.Nombre}>
+              {type.Nombre}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
   );

@@ -6,6 +6,8 @@ import {
   POST_POKEMONS,
   FILTER,
   ORDER,
+  FILTER_BY_TYPES,
+  PAGE,
 } from "../actions/actions_types";
 
 const initialState = {
@@ -14,6 +16,7 @@ const initialState = {
   types: [],
   pokemonsCopy: [],
   pokemonsOrigin: [],
+  pageActual: 1,
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -63,6 +66,24 @@ const rootReducer = (state = initialState, { type, payload }) => {
           pokemons: state.pokemonsCopy,
         };
       }
+      case FILTER_BY_TYPES:
+        if (payload !== "All Pokemons") {
+          const filteredPokemons = state.pokemonsOrigin.filter(
+            (pokemon) => pokemon.Tipo?.includes(payload)
+          );
+          const filteredPokemonsDB = state.pokemonsOrigin.filter(
+            (pokemon) => pokemon.types?.some((type) => type.Nombre === payload)
+          );
+          const combinedPokemons = [...filteredPokemons, ...filteredPokemonsDB];
+          const uniquePokemons = Array.from(new Set(combinedPokemons.map((pokemon) => pokemon.ID)))
+            .map((id) => combinedPokemons.find((pokemon) => pokemon.ID === id));
+          return { ...state, pokemons: uniquePokemons };
+        } else {
+          return {
+            ...state,
+            pokemons: state.pokemonsOrigin,
+          };
+        }
 
     case ORDER:
       if (payload === "AscendingAttack" || payload === "DescendingAttack") {

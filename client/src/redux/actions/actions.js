@@ -7,6 +7,7 @@ import {
   POST_POKEMONS,
   FILTER,
   ORDER,
+  FILTER_BY_TYPES,
 } from "./actions_types";
 
 export const getPokemons = () => {
@@ -66,6 +67,13 @@ export const createPokemons = (pokemon) => {
 export const filterPokemon = (filter) => {
   return {
     type: FILTER,
+    payload: filter,
+  };
+};
+
+export const filterByTypes = (filter) => {
+  return {
+    type: FILTER_BY_TYPES,
     payload: filter,
   };
 };
