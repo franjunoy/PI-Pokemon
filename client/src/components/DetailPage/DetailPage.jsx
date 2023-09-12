@@ -5,6 +5,7 @@ import { getPokemonsId } from "../../redux/actions/actions";
 import { Link } from "react-router-dom";
 import style from "./DetailPage.module.css";
 import Home from "../../assets/Home.png";
+import Loader from "../Loader/Loader";
 
 import unknownImage from "../../assets/tipoDesc.png";
 import steelImage from "../../assets/tipoAcero.png";
@@ -25,7 +26,7 @@ import darkImage from "../../assets/tipoSiniestro.png";
 import groundImage from "../../assets/tipoTierra.png";
 import poisonImage from "../../assets/tipoVeneno.png";
 import flyingImage from "../../assets/tipoVolador.png";
-import loading from "../../assets/png-transparent-poke-ball-thumbnail.png"
+import loading from "../../assets/png-transparent-poke-ball-thumbnail.png";
 import { useState } from "react";
 
 const getImageByType = (type) => {
@@ -84,9 +85,7 @@ const DetailPage = () => {
       </div>
 
       {isLoading ? (
-        <div className={style.loading}>
-        <img src={loading} alt="Pokeball" />
-      </div>
+        <Loader/>
       ) : (
         <div>
           {pokemon && pokemon.idPokemonApi && (

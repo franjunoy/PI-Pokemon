@@ -9,7 +9,7 @@
   align-items: center;
   padding-top: 20px;
   position: relative;
-  height: auto; /* Elimina la altura fija para hacerlo responsive */
+  min-height: 100vh;
 }
 
 .buttonHome {
