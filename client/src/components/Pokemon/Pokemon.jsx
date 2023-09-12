@@ -48,7 +48,14 @@ const getImageByType = (type) => {
   return typeImages[type.toLowerCase()];
 };
 
-const Pokemon = ({ pokemons }) => {
+const Pokemon = ({ pokemons, isLoading }) => {
+  if (isLoading) {
+    return (
+      <div className={style.loading}>
+        <p>Cargando...</p>
+      </div>
+    );
+  }
   return (
     <div className={style.PokemonGrid}>
       {pokemons.map((pokemon) => (

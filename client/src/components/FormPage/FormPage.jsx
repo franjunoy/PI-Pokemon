@@ -285,13 +285,13 @@ const FormPage = () => {
             {errors.Tipo && <span>{errors.Tipo}</span>}
           </div>
           <div className={style.buttonGroup}>
-            <button type="submit">
+            <button type="submit" className={style.buttonSubmit}>
               <img
                 src={pokebolaAtrapada}
                 alt="pokebolaAtrapada"
                 className={style.buttonCreate}
               />
-              Crear Pokémon
+              <div className={style.divCreate}>Crear Pokémon</div>
             </button>
           </div>
         </form>

@@ -12,8 +12,10 @@ import { useEffect } from "react";
 const OrderFilter = () => {
   const dispatch = useDispatch();
   const [aux, setAux] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [selectedTipo, setSelectedTipo] = useState(false);
   const tipos = useSelector((state) => state.types);
+
   useEffect(() => {
     dispatch(getTypes());
   }, [dispatch]);
@@ -33,7 +35,8 @@ const OrderFilter = () => {
   };
 
   return (
-    <div className={style.conteiner}>
+    <div className={style.container}>
+      <div className={style.divOption}>
       <select onChange={handleOrder} className={style.option}>
         <option value="Id">Por Id</option>
         <option value="AscendingAZ">Ascendente A-Z</option>
@@ -41,7 +44,20 @@ const OrderFilter = () => {
         <option value="AscendingAttack">Menor Ataque</option>
         <option value="DescendingAttack">Mayor Ataque</option>
       </select>
-      <div className={style.conteinerLabel}>
+
+      <div className={style.typeFilter}>
+        <select onChange={handleFilterByTypes} className={style.option}>
+          <option value="All Pokemons">Todos los Tipos</option>
+          {tipos.map((type) => (
+            <option key={type.ID} value={type.Nombre}>
+              {type.Nombre}
+            </option>
+          ))}
+        </select>
+      </div>
+      </div>
+
+      <div className={style.labelContainer}>
         <label htmlFor="allPokemons" className={style.label}>
           {" "}
           All Pokemons
@@ -75,16 +91,6 @@ const OrderFilter = () => {
             onChange={handleFilter}
           />
         </label>
-      </div>
-      <div>
-        <select onChange={handleFilterByTypes} className={style.option}>
-          <option value="All Pokemons">Todos los Tipos</option>
-          {tipos.map((type) => (
-            <option key={type.ID} value={type.Nombre}>
-              {type.Nombre}
-            </option>
-          ))}
-        </select>
       </div>
     </div>
   );

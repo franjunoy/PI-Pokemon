@@ -1,29 +1,3 @@
-.buttonHome {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.imageHome{
-  width: 140px;
-  height: 110px;
-  background-color: transparent;
-  border: transparent;
-  display: flex;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.buttonCreate{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  border-radius: 5px;
-  width: 60px;
-}
-
-
 .container {
   background-image: url("../../assets/laboratorio mew.jpg");
   background-position: center;
@@ -33,10 +7,48 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 160vh;
   padding-top: 20px;
   position: relative;
+  height: auto; /* Elimina la altura fija para hacerlo responsive */
 }
+
+.buttonHome {
+  position: absolute;
+  top: 1%; /* Ajusta la posición vertical en porcentaje */
+  left: 1%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+.imageHome {
+  /* Elimina width y height para ajustar automáticamente la imagen */
+  background-color: transparent;
+  border: transparent;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 140px; /* Ajusta el ancho máximo */
+  height: auto; /* Ajusta la altura automáticamente */
+}
+
+.buttonSubmit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px; /* Establece el ancho deseado para hacerlo cuadrado */
+  height: 140px; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+  padding: 10px 20px;
+  border-radius: 1px;
+  margin-top: 10px;
+}
+
+.buttonCreate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px; /* Ajusta el espaciado horizontal y vertical */
+  border-radius: 5px;
+  width: 100%;
+}
+
 
 form {
   display: flex;
@@ -47,7 +59,8 @@ form {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  width: 400px;
+  width: 80%; /* Ajusta el ancho del formulario */
+  max-width: 400px; /* Limita el ancho máximo en pantallas grandes */
 }
 
 h1 {
@@ -58,28 +71,31 @@ h1 {
   border: 1px solid black;
   border-radius: 10px;
   text-align: center;
+  font-size: 24px; /* Ajusta el tamaño de fuente */
 }
 
 div.form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Ajusta el margen inferior */
 }
 
 label {
   font-weight: bold;
+  margin-bottom: 5px; /* Ajusta el margen inferior */
 }
 
 input[type="text"] {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
 }
 
 p {
   margin: 5px 0;
   font-size: 12px;
-  color: rgb(199, 192, 0)f9f;
+  color: rgb(0, 0, 0); /* Corrige el color de texto */
 }
 
 span {
@@ -100,6 +116,7 @@ div.tipos label {
 div.button-group {
   display: flex;
   justify-content: center;
+  margin-top: 10px; /* Ajusta el margen superior */
 }
 
 div.button-group button {
@@ -127,9 +144,9 @@ div.button-group a {
 }
 
 .imageDiv {
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Ajusta el margen inferior */
 }
 
 .nameAndLifeDiv {
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Ajusta el margen inferior */
 }

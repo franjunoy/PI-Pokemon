@@ -8,6 +8,8 @@ import {
   FILTER,
   ORDER,
   FILTER_BY_TYPES,
+  SET_LOADING,  
+  UNSET_LOADING,
 } from "./actions_types";
 
 export const getPokemons = () => {
@@ -22,13 +24,17 @@ export const getPokemons = () => {
 
 export const getPokemonName = (name) => {
   return async (dispatch) => {
-    const { data } = await axios.get(
-      `http://localhost:3001/pokemons?name=${name}`
-    );
-    dispatch({
-      type: GET_POKEMON_NAME,
-      payload: data,
-    });
+    try {
+      const { data } = await axios.get(
+        `http://localhost:3001/pokemons?name=${name}`
+      );
+      dispatch({
+        type: GET_POKEMON_NAME,
+        payload: data,
+      });
+    } catch {
+      alert("Ingrese un nombre válido")
+    }
   };
 };
 export const getPokemonsId = (id) => {
@@ -84,3 +90,11 @@ export const orderPokemons = (order) => {
     payload: order,
   };
 };
+
+export const setLoading = () => ({
+  type: SET_LOADING,
+});
+
+export const unsetLoading = () => ({
+  type: UNSET_LOADING,
+});

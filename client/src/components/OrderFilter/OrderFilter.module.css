@@ -2,10 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10rem;
-  height: 0vh;
-  width: 60%;
-  
+  max-width: 100%
+}
+
+.divOption{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .option {
@@ -18,8 +23,14 @@
   font-weight: bold;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  margin-left: 200px;
-  margin-top: 40px;
+  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+  margin: 2px;
+}
+
+.labelContainer {
+  display: flex;
+  justify-content: center; /* Centra los radio buttons horizontalmente */
+  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
 }
 
 .label {
@@ -31,8 +42,7 @@
   cursor: pointer;
   font-weight: bold;
   font-family: Arial, sans-serif;
-  margin-right: 10px;
-  align-items: center;
+  margin: 2px;
 }
 
 .label:hover {
@@ -43,7 +53,3 @@
   display: none;
 }
 
-.conteinerLabel{
-  margin-left: 880px;
-  margin-top: -40px;
-}

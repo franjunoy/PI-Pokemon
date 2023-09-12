@@ -7,3 +7,5 @@ export const FILTER = "FILTER";
 export const ORDER = "ORDER";
 export const FILTER_BY_TYPES = "FILTER_BY_TYPES";
 export const PAGE = "PAGE";
+export const SET_LOADING = 'SET_LOADING';  
+export const UNSET_LOADING = 'UNSET_LOADING';

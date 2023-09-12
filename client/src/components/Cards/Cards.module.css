@@ -4,3 +4,40 @@
     align-items: center;
     justify-content: center;
 }
+
+.buttonItem {
+    margin: 5px;
+  }
+
+  .loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .loading p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4500; /* Color de tipo Fuego de Pokémon */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .loading img {
+    max-width: 15%; /* Hace que la imagen de carga sea responsiva */
+    max-height: 15%;
+    animation: spin 2s linear infinite; /* Animación de giro */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

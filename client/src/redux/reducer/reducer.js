@@ -7,7 +7,8 @@ import {
   FILTER,
   ORDER,
   FILTER_BY_TYPES,
-  PAGE,
+  SET_LOADING,
+  UNSET_LOADING,
 } from "../actions/actions_types";
 
 const initialState = {
@@ -17,6 +18,7 @@ const initialState = {
   pokemonsCopy: [],
   pokemonsOrigin: [],
   pageActual: 1,
+  isLoading: false,
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -48,6 +50,17 @@ const rootReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
       };
+    case SET_LOADING:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case UNSET_LOADING:
+      return {
+        ...state,
+        isLoading: false,
+      };
+
     case FILTER:
       if (payload === "Api") {
         const allPokemonsApi = state.pokemonsCopy.filter(
@@ -66,24 +79,25 @@ const rootReducer = (state = initialState, { type, payload }) => {
           pokemons: state.pokemonsCopy,
         };
       }
-      case FILTER_BY_TYPES:
-        if (payload !== "All Pokemons") {
-          const filteredPokemons = state.pokemonsOrigin.filter(
-            (pokemon) => pokemon.Tipo?.includes(payload)
-          );
-          const filteredPokemonsDB = state.pokemonsOrigin.filter(
-            (pokemon) => pokemon.types?.some((type) => type.Nombre === payload)
-          );
-          const combinedPokemons = [...filteredPokemons, ...filteredPokemonsDB];
-          const uniquePokemons = Array.from(new Set(combinedPokemons.map((pokemon) => pokemon.ID)))
-            .map((id) => combinedPokemons.find((pokemon) => pokemon.ID === id));
-          return { ...state, pokemons: uniquePokemons };
-        } else {
-          return {
-            ...state,
-            pokemons: state.pokemonsOrigin,
-          };
-        }
+    case FILTER_BY_TYPES:
+      if (payload !== "All Pokemons") {
+        const filteredPokemons = state.pokemonsOrigin.filter((pokemon) =>
+          pokemon.Tipo?.includes(payload)
+        );
+        const filteredPokemonsDB = state.pokemonsOrigin.filter((pokemon) =>
+          pokemon.types?.some((type) => type.Nombre === payload)
+        );
+        const combinedPokemons = [...filteredPokemons, ...filteredPokemonsDB];
+        const uniquePokemons = Array.from(
+          new Set(combinedPokemons.map((pokemon) => pokemon.ID))
+        ).map((id) => combinedPokemons.find((pokemon) => pokemon.ID === id));
+        return { ...state, pokemons: uniquePokemons };
+      } else {
+        return {
+          ...state,
+          pokemons: state.pokemonsOrigin,
+        };
+      }
 
     case ORDER:
       if (payload === "AscendingAttack" || payload === "DescendingAttack") {
@@ -124,6 +138,7 @@ const rootReducer = (state = initialState, { type, payload }) => {
         };
       }
 
+    // eslint-disable-next-line no-fallthrough
     default:
       return { ...state };
   }

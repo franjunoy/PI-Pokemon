@@ -1,39 +1,112 @@
-@font-face {
-  font-family: "Unown";
-  src: url("../../assets/Unown.ttf") format("truetype");
-}
-
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 400px;
-  margin-top: -140px;
+  flex-direction: row;
+  max-width: 100%
+}
+
+.divForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.divSearch{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.divInput{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .image {
-  width: 170px;
-  height: auto;
-  margin-right: 10px;
+  max-width: 25%; /* Hace que la imagen sea responsiva */
+  margin-bottom: 10px; /* Agrega margen inferior */
+  margin-top: 30px;
 }
 
 .buttonInput {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Cambia a "row" para alinear los botones horizontalmente */
   align-items: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .button {
-  font-family: "Unown", sans-serif;
-  font-size: 20px;
-  padding: 1px 20px;
-  flex-direction: row
-  
+  font-family: sans-serif;
+  font-size: 15px; /* Ajusta el tamaño de fuente según sea necesario */
+  padding: 10px 15px; /* Ajusta el espaciado de los botones */
 }
 
 .input {
   font-size: 12px;
-  padding: 5px 10px;
+  padding: 5px;
+  flex-direction: column;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.loading img {
+  max-width: 15%; /* Hace que la imagen de carga sea responsiva */
+  max-height: 15%; /* Hace que la imagen de carga sea responsiva */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.linkForm {
+  text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+}
+
+/* Modifica los estilos del botón */
+.buttonForm {
+  font-family: "Unown", sans-serif;
+  background-color: transparent;
+  border: transparent;
+  margin-left: 20px; /* Ajusta el margen según tus necesidades */
+  margin-top: 20px;
+  padding: 10px 20px;
+  max-width: 100%; /* Permite que el botón se ajuste al contenido y sea responsive */
+}
+
+/* Estilo para la imagen dentro del botón */
+.imageForm {
+  max-width: 100%; /* Asegura que la imagen se ajuste al tamaño del botón */
+  margin-top: 5px;
+}
+
+/* Estilo para el texto dentro del botón */
+.h2Form {
+  background-color: rgba(255, 255, 255, 0.53);
 }
