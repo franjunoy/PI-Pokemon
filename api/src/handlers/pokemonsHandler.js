@@ -16,7 +16,7 @@ const pokemonsHandler = async (req, res) => {
       });
       const apiPokemons = await findAllPokemonsApi();
       const namePokemonApi = apiPokemons.filter((pokemon) => {
-        return pokemon.Nombre.toLowerCase() === name.toLowerCase();
+        return pokemon.Nombre.toLowerCase().includes(name.toLowerCase());
       });
       if (namePokemonApi.length === 0 && namePokemonBD.length === 0) {
         throw new Error("No se encontraron Pokemones con ese nombre");
