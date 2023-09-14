@@ -9,33 +9,32 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-}
-
-.LandingPage {
+  min-height: 100vh; /* Ensure at least 100% viewport height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .PokemonImg {
-  width: 700px;
-  margin-bottom: 70px;
+  max-width: 100%; /* Ensure the image scales down to fit its container */
+  width: auto; /* Ensure the image maintains its aspect ratio */
+  height: auto; /* Ensure the image maintains its aspect ratio */
+  margin-bottom: 5vw; /* Adjust margin as needed */
 }
 
 .h1 {
-    font-size: 11px;
-    font-family: "Pokemon GB";
-    border-radius: 5px;
-    padding: 10px;
-    width: 400px;
-    height: 56px;
-    line-height: 16px;
-    margin: 20px auto;
-    background: white;
-    border: 1px solid white;
-    box-shadow: 0 1px 0 1px black,
+  font-size: 4vw;
+  font-family: "Pokemon GB";
+  border-radius: 5px;
+  padding: 10px;
+  width: 400px;
+  height: 56px;
+  line-height: 16px;
+  margin: 20px auto;
+  background: white;
+  border: 1px solid white;
+  box-shadow: 0 1px 0 1px black,
                 inset 0 1px 0 1px black,
                 0 0 0 1px black,
                 inset 0 0 0 1px black;
@@ -54,7 +53,7 @@
 .h3 {
   color: #000000;
   text-align: center;
-  font-size: 15px;
+  font-size: 2vw;
   margin-top: 25px;
   border: none;
   text-shadow: 0 0 0 #000000;
@@ -66,8 +65,8 @@
 }
 
 .button {
-  width: 150px;
-  height: 150px;
+  width: 15vw; /* Adjust as needed */
+  height: 15vw;
   border-radius: 50%;
   background-color: transparent;
   background-image: url('../../assets/pokebola.png');
@@ -119,5 +118,21 @@
   }
   100% {
     transform: rotate(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 6vw; /* Adjust font size for smaller screens */
+  }
+
+  .h3 {
+    font-size: 4vw; /* Adjust font size for smaller screens */
+  }
+
+  .button {
+    width: 30vw; /* Adjust button size for smaller screens */
+    height: 30vw; /* Adjust button size for smaller screens */
+    margin-bottom: 10vw; /* Adjust button margin for smaller screens */
   }
 }
