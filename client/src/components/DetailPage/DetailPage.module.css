@@ -133,3 +133,32 @@
   align-items: center;
 }
 
+@media (max-width: 480px) {
+  .button {
+    width: 100px; /* Ajusta según sea necesario para pantallas pequeñas */
+    height: 80px; /* Ajusta según sea necesario para pantallas pequeñas */
+  }
+
+  .image {
+    width: 200px; /* Ajusta según sea necesario para pantallas pequeñas */
+    height: 200px; /* Ajusta según sea necesario para pantallas pequeñas */
+  }
+
+  .idNombre,
+  .idNombreDB,
+  .first,
+  .second,
+  .third,
+  .espacio {
+    font-size: 16px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    width: auto; /* Ajusta según sea necesario para pantallas pequeñas */
+    height: 80px; /* Ajusta según sea necesario para pantallas pequeñas */
+    margin-right: 20px; /* Ajusta según sea necesario para pantallas pequeñas */
+  }
+
+  .PokemonTypeImage {
+    width: 60px; /* Ajusta según sea necesario para pantallas pequeñas */
+    height: 14px; /* Ajusta según sea necesario para pantallas pequeñas */
+    margin-right: 5px; /* Ajusta según sea necesario para pantallas pequeñas */
+  }
+}
