@@ -127,7 +127,7 @@
 
 @media (max-width: 480px) {
   .h1 {
-    font-size: 6vw; /* Adjust font size for smaller screens */
+    font-size: 4vw; /* Adjust font size for smaller screens */
   }
 
   .h3 {
