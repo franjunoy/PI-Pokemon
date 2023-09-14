@@ -9,32 +9,35 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh; /* Ensure at least 100% viewport height */
+}
+
+.LandingPage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .PokemonImg {
-  max-width: 100%; /* Ensure the image scales down to fit its container */
-  width: auto; /* Ensure the image maintains its aspect ratio */
-  height: auto; /* Ensure the image maintains its aspect ratio */
-  margin-bottom: 5vw; /* Adjust margin as needed */
+  max-width: 100%; /* Asegura que la imagen se reduzca para ajustarse a su contenedor */
+  width: auto; /* Asegura que la imagen mantenga su relación de aspecto */
+  height: auto; /* Asegura que la imagen mantenga su relación de aspecto */
+  margin-bottom: 5vw;
 }
 
 .h1 {
-  font-size: 4vw;
-  font-family: "Pokemon GB";
-  border-radius: 5px;
-  padding: 10px;
-  width: 400px;
-  height: 56px;
-  line-height: 16px;
-  margin: 20px auto;
-  background: white;
-  border: 1px solid white;
-  box-shadow: 0 1px 0 1px black,
+    font-size: 11px;
+    font-family: "Pokemon GB";
+    border-radius: 5px;
+    padding: 10px;
+    width: 400px;
+    height: 56px;
+    line-height: 16px;
+    margin: 20px auto;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 0 1px 0 1px black,
                 inset 0 1px 0 1px black,
                 0 0 0 1px black,
                 inset 0 0 0 1px black;
@@ -53,7 +56,7 @@
 .h3 {
   color: #000000;
   text-align: center;
-  font-size: 2vw;
+  font-size: 15px;
   margin-top: 25px;
   border: none;
   text-shadow: 0 0 0 #000000;
@@ -65,7 +68,7 @@
 }
 
 .button {
-  width: 15vw; /* Adjust as needed */
+  width: 15vw; 
   height: 15vw;
   border-radius: 50%;
   background-color: transparent;
@@ -120,6 +123,7 @@
     transform: rotate(0);
   }
 }
+
 
 @media (max-width: 480px) {
   .h1 {
