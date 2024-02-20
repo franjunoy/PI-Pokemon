@@ -14,7 +14,9 @@ import {
 
 export const getPokemons = () => {
   return async (dispatch) => {
-    const { data } = await axios.get('http://localhost:3001/pokemons');
+    const { data } = await axios.get(
+      'https://back-end-pokemon.web.app/pokemons'
+    );
     dispatch({
       type: GET_POKEMONS,
       payload: data
@@ -26,7 +28,7 @@ export const getPokemonName = (name) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3001/pokemons?name=${name}`
+        `https://back-end-pokemon.web.app/pokemons?name=${name}`
       );
       dispatch({
         type: GET_POKEMON_NAME,
@@ -39,7 +41,9 @@ export const getPokemonName = (name) => {
 };
 export const getPokemonsId = (id) => {
   return async (dispatch) => {
-    const { data } = await axios.get(`http://localhost:3001/pokemons/${id}`);
+    const { data } = await axios.get(
+      `https://back-end-pokemon.web.app/pokemons/${id}`
+    );
     dispatch({
       type: GET_POKEMONS_ID,
       payload: data
@@ -49,7 +53,7 @@ export const getPokemonsId = (id) => {
 
 export const getTypes = () => {
   return async (dispatch) => {
-    const { data } = await axios.get('http://localhost:3001/types');
+    const { data } = await axios.get('https://back-end-pokemon.web.app/types');
     dispatch({
       type: GET_TYPES,
       payload: data
@@ -60,7 +64,7 @@ export const getTypes = () => {
 export const createPokemons = (pokemon) => {
   return async (dispatch) => {
     const { data } = await axios.post(
-      'http://localhost:3001/pokemons',
+      'https://back-end-pokemon.web.app/pokemons',
       pokemon
     );
     return {
